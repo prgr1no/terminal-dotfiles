@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" width="820" height="470" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- window -->
+  <rect x="16" y="16" width="788" height="438" rx="12" fill="#282a36" filter="url(#shadow)"/>
+  <!-- title bar -->
+  <path d="M16 28 a12 12 0 0 1 12 -12 h764 a12 12 0 0 1 12 12 v20 h-788 z" fill="#21222c"/>
+  <circle cx="40" cy="38" r="7" fill="#ff5555"/>
+  <circle cx="64" cy="38" r="7" fill="#f1fa8c"/>
+  <circle cx="88" cy="38" r="7" fill="#50fa7b"/>
+  <text x="410" y="43" text-anchor="middle" fill="#6272a4" font-size="14">kitty · zsh · starship · yazi</text>
+
+  <!-- body -->
+  <g>
+    <!-- prompt 1 -->
+    <text x="40" y="98">
+      <tspan fill="#50fa7b" font-weight="bold">user@host</tspan><tspan fill="#8be9fd" font-weight="bold"> ~/dotfiles</tspan><tspan fill="#ff79c6" font-weight="bold"> git:main</tspan><tspan fill="#f1fa8c"> *</tspan><tspan fill="#bd93f9" font-weight="bold"> ❯ </tspan><tspan fill="#f8f8f2">eza --icons</tspan>
+    </text>
+    <!-- eza output -->
+    <text x="40" y="128"><tspan fill="#8be9fd">▸ bin   ▸ config   ▸ docs   ▸ dotfiles</tspan></text>
+    <text x="40" y="152"><tspan fill="#f8f8f2">  README.md   </tspan><tspan fill="#f1fa8c">install.sh   </tspan><tspan fill="#6272a4">LICENSE</tspan></text>
+
+    <!-- prompt 2 -->
+    <text x="40" y="196">
+      <tspan fill="#50fa7b" font-weight="bold">user@host</tspan><tspan fill="#8be9fd" font-weight="bold"> ~/dotfiles</tspan><tspan fill="#bd93f9" font-weight="bold"> ❯ </tspan><tspan fill="#f8f8f2">y</tspan><tspan fill="#6272a4">              # explorador de archivos (yazi)</tspan>
+    </text>
+    <!-- yazi mini panel -->
+    <text x="40" y="226"><tspan fill="#bd93f9">┌ Dracula ──────────────┐</tspan></text>
+    <text x="40" y="250"><tspan fill="#282a36">│</tspan><tspan fill="#bd93f9"> ▸ Documentos          </tspan><tspan fill="#6272a4">│</tspan></text>
+    <text x="40" y="274"><tspan fill="#6272a4">│ </tspan><tspan fill="#ffb86c">  foto.png  </tspan><tspan fill="#6272a4">[preview] │</tspan></text>
+    <text x="40" y="298"><tspan fill="#6272a4">│ </tspan><tspan fill="#f8f8f2">  notas.md            </tspan><tspan fill="#6272a4">│</tspan></text>
+    <text x="40" y="322"><tspan fill="#6272a4">└───────────────────────┘</tspan></text>
+
+    <!-- prompt 3 -->
+    <text x="40" y="366">
+      <tspan fill="#50fa7b" font-weight="bold">user@host</tspan><tspan fill="#8be9fd" font-weight="bold"> ~/dotfiles</tspan><tspan fill="#bd93f9" font-weight="bold"> ❯ </tspan><tspan fill="#f8f8f2">icat logo.png</tspan><tspan fill="#6272a4">   # ver imagen en la terminal</tspan>
+    </text>
+    <text x="40" y="410">
+      <tspan fill="#bd93f9" font-weight="bold">❯ </tspan><tspan fill="#f8f8f2">█</tspan>
+    </text>
+  </g>
+</svg>

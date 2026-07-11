@@ -1,11 +1,20 @@
-# Terminal Dotfiles
+<div align="center">
 
-Configuración de terminal moderna, ligera y sin frameworks pesados: **kitty + zsh + Starship + yazi**, con tema **Dracula** en toda la pila.
+# 🐉 Terminal Dotfiles
 
-![shell](https://img.shields.io/badge/shell-zsh-89e051)
+**kitty · zsh · Starship · yazi — todo en [Dracula](https://draculatheme.com)**
+
+Configuración de terminal moderna y ligera, sin frameworks pesados.
+
+![shell](https://img.shields.io/badge/shell-zsh-89e051?logo=gnu-bash&logoColor=white)
 ![terminal](https://img.shields.io/badge/terminal-kitty-9b59b6)
+![prompt](https://img.shields.io/badge/prompt-starship-DD0B78?logo=starship&logoColor=white)
 ![theme](https://img.shields.io/badge/theme-Dracula-bd93f9)
 ![license](https://img.shields.io/badge/license-MIT-blue)
+
+<img src="docs/preview.svg" alt="Vista previa de la terminal" width="720">
+
+</div>
 
 ## ✨ Qué incluye
 
@@ -23,21 +32,10 @@ Chuleta completa de kitty, zsh y yazi en **[docs/cheatsheet.md](docs/cheatsheet.
 ## 📁 Estructura
 
 ```text
-dotfiles/
-  bashrc          # handoff a zsh + fallback bash
-  zshrc           # zsh: alias, funciones, fzf, zoxide, starship, yazi
-config/
-  kitty/          # kitty.conf + dracula.conf
-  yazi/           # yazi.toml + theme.toml (Dracula)
-  starship/       # starship.toml
-  terminal-kit/   # palette.sh (paleta Dracula compartida)
-  ripgrep/        # config
-  btop/           # btop.conf + tema Dracula
-docs/
-  terminal-kit.md # documentación de la terminal
-  cheatsheet.md   # chuleta de atajos
-bin/
-  install.sh      # copia las configs a su sitio (con backup)
+dotfiles/          bashrc · zshrc
+config/            kitty · yazi · starship · terminal-kit · ripgrep · btop
+docs/              terminal-kit.md · cheatsheet.md
+bin/               install.sh
 ```
 
 ## 🚀 Instalación
@@ -52,21 +50,22 @@ Abre una terminal nueva (o kitty) para aplicar los cambios.
 
 ## 🔧 Requisitos
 
-Las configs esperan estas herramientas disponibles (en el sistema o en `~/.local/bin`):
+Las configs esperan estas herramientas (en el sistema o en `~/.local/bin`):
 
-- **kitty** — `sudo dnf install kitty` / `sudo apt install kitty`, o el [instalador oficial](https://sw.kovidgoyal.net/kitty/binary/) en `~/.local`.
-- **zsh, starship, fzf, fd, ripgrep, bat, eza, zoxide** — desde el gestor de paquetes o binarios de usuario.
-- **yazi** — explorador de archivos ([sxyazi/yazi](https://github.com/sxyazi/yazi)).
-- **Una Nerd Font** — p. ej. [Hack Nerd Font](https://www.nerdfonts.com/) (para los iconos de eza/starship).
+| Herramienta | Para qué | Fuente |
+|---|---|---|
+| **kitty** | emulador de terminal | `dnf/apt install kitty` o el [instalador oficial](https://sw.kovidgoyal.net/kitty/binary/) |
+| **zsh · starship · fzf · fd · ripgrep · bat · eza · zoxide** | shell y utilidades | gestor de paquetes o binarios de usuario |
+| **yazi** | explorador con vista de imágenes | [sxyazi/yazi](https://github.com/sxyazi/yazi) |
+| **Una Nerd Font** | iconos de eza/starship | [Nerd Fonts](https://www.nerdfonts.com/) (p. ej. Hack) |
 
 ## 🎨 Tema
 
 **Dracula** en todo: kitty, prompt, yazi, `LS_COLORS`, fzf, bat, ripgrep y btop.
-Fondo `#282a36` · texto `#f8f8f2` · morado `#bd93f9` · verde `#50fa7b` · cian `#8be9fd`.
+
+`#282a36` fondo · `#f8f8f2` texto · `#bd93f9` morado · `#50fa7b` verde · `#8be9fd` cian · `#ff79c6` rosa
 
 ## 🆘 Volver a bash
-
-Para abrir bash sin saltar automáticamente a zsh:
 
 ```bash
 TERMINAL_KIT_DISABLE_ZSH=1 bash
