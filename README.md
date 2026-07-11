@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/banner.svg" alt="prgr1no — terminal dotfiles" width="660">
+<img src="docs/banner.svg" alt="terminal-dotfiles" width="600">
 
 ![shell](https://img.shields.io/badge/shell-zsh-89e051?logo=gnu-bash&logoColor=white)
 ![terminal](https://img.shields.io/badge/terminal-kitty-9b59b6)
