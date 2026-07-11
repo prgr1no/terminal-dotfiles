@@ -25,6 +25,20 @@ Configuración de terminal moderna y ligera, sin frameworks pesados.
 - **Herramientas modernas** — `bat` (cat), `eza` (ls), `fzf`, `fd`, `ripgrep`, `zoxide`, `duf`, `ncdu`.
 - **Paleta Dracula compartida** para bat, fzf, ripgrep, eza/ls, less, Starship y btop.
 
+## ⚡ Instalación rápida (un solo curl)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/prgr1no/terminal-dotfiles/main/bootstrap.sh | bash
+```
+
+Instala las herramientas (kitty, zsh, Starship, yazi, fzf, fd, ripgrep, bat, eza, zoxide + Hack Nerd Font) en **Ubuntu/Debian (apt)** o **Fedora (dnf)**, y copia las configuraciones. Es idempotente: puedes volver a lanzarlo sin miedo. Pedirá `sudo` para los paquetes del sistema.
+
+> ¿Prefieres revisar antes lo que hace? Es lo razonable con cualquier `curl | bash`:
+> ```bash
+> curl -fsSLO https://raw.githubusercontent.com/prgr1no/terminal-dotfiles/main/bootstrap.sh
+> less bootstrap.sh && bash bootstrap.sh
+> ```
+
 ## 📄 Atajos
 
 Chuleta completa de kitty, zsh y yazi en **[docs/cheatsheet.md](docs/cheatsheet.md)**.
@@ -38,7 +52,9 @@ docs/              terminal-kit.md · cheatsheet.md
 bin/               install.sh
 ```
 
-## 🚀 Instalación
+## 🚀 Instalación manual
+
+Si ya tienes las herramientas y solo quieres las configuraciones:
 
 ```bash
 git clone https://github.com/prgr1no/terminal-dotfiles ~/terminal-dotfiles

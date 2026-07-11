@@ -9,14 +9,24 @@ case $- in
 esac
 
 # >>> terminal-kit zsh handoff >>>
+# En terminales interactivas salta a zsh. Prefiere el zsh del terminal-kit
+# (~/.local/bin/zsh); si no existe, usa el zsh del sistema.
 if [ -z "${TERMINAL_KIT_DISABLE_ZSH:-}" ] \
    && [ -z "${ZSH_VERSION:-}" ] \
    && [ -z "${BASH_EXECUTION_STRING:-}" ] \
-   && [ -x "$HOME/.local/bin/zsh" ] \
    && [ -t 1 ]; then
-    export SHELL="$HOME/.local/bin/zsh"
-    export LD_LIBRARY_PATH="$HOME/.local/terminal-kit/root/usr/lib/x86_64-linux-gnu${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-    exec "$HOME/.local/bin/zsh" -l
+    _tk_zsh=""
+    if [ -x "$HOME/.local/bin/zsh" ]; then
+        _tk_zsh="$HOME/.local/bin/zsh"
+        export LD_LIBRARY_PATH="$HOME/.local/terminal-kit/root/usr/lib/x86_64-linux-gnu${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+    elif command -v zsh >/dev/null 2>&1; then
+        _tk_zsh="$(command -v zsh)"
+    fi
+    if [ -n "$_tk_zsh" ]; then
+        export SHELL="$_tk_zsh"
+        exec "$_tk_zsh" -l
+    fi
+    unset _tk_zsh
 fi
 # <<< terminal-kit zsh handoff <<<
 
