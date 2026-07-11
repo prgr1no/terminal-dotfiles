@@ -6,7 +6,7 @@
 ![terminal](https://img.shields.io/badge/terminal-kitty-9b59b6)
 ![prompt](https://img.shields.io/badge/prompt-starship-DD0B78?logo=starship&logoColor=white)
 ![theme](https://img.shields.io/badge/theme-Dracula-bd93f9)
-![license](https://img.shields.io/badge/license-MIT-blue)
+![license](https://img.shields.io/badge/license-GPLv3-blue)
 
 </div>
 
@@ -94,7 +94,7 @@ TERMINAL_KIT_DISABLE_ZSH=1 bash
 
 ## 📜 Licencia
 
-[MIT](LICENSE) — cógelo, tócalo, hazlo tuyo.
+[GPLv3](LICENSE) — libre para usar, estudiar, modificar y compartir; los trabajos derivados se mantienen también bajo GPLv3.
 
 <div align="center">
 <sub>Hecho con ☕, Dracula y demasiado rato pixelando el banner.</sub>
