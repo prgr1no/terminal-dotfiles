@@ -1,10 +1,6 @@
 <div align="center">
 
-# 🐉 Terminal Dotfiles
-
-**kitty · zsh · Starship · yazi — todo en [Dracula](https://draculatheme.com)**
-
-Configuración de terminal moderna y ligera, sin frameworks pesados.
+<img src="docs/banner.svg" alt="prgr1no — terminal dotfiles" width="660">
 
 ![shell](https://img.shields.io/badge/shell-zsh-89e051?logo=gnu-bash&logoColor=white)
 ![terminal](https://img.shields.io/badge/terminal-kitty-9b59b6)
@@ -12,18 +8,15 @@ Configuración de terminal moderna y ligera, sin frameworks pesados.
 ![theme](https://img.shields.io/badge/theme-Dracula-bd93f9)
 ![license](https://img.shields.io/badge/license-MIT-blue)
 
-<img src="docs/preview.svg" alt="Vista previa de la terminal" width="720">
-
 </div>
 
-## ✨ Qué incluye
+> Hola 👋 Soy **prgr1no**. Esto es el setup de terminal que uso a diario en mis máquinas Linux:
+> rápido, con estilo [Dracula](https://draculatheme.com) de arriba a abajo y sin frameworks pesados.
+> Lo guardo aquí para reinstalarlo en **un solo comando** cuando estreno equipo — y por si a alguien más le sirve. Si te mola, deja una ⭐.
 
-- **kitty** — emulador de terminal GPU con transparencia (+ blur en KDE/Wayland), tema Dracula, Nerd Font y ~47 atajos.
-- **zsh** — shell interactiva sin Oh My Zsh: autosugerencias, resaltado de sintaxis, historial compartido.
-- **Starship** — prompt Dracula con usuario, host, ruta, rama Git y código de error.
-- **yazi** — explorador de archivos en Rust con **vista previa de imágenes** por el protocolo gráfico de kitty.
-- **Herramientas modernas** — `bat` (cat), `eza` (ls), `fzf`, `fd`, `ripgrep`, `zoxide`, `duf`, `ncdu`.
-- **Paleta Dracula compartida** para bat, fzf, ripgrep, eza/ls, less, Starship y btop.
+<div align="center">
+  <img src="docs/preview.svg" alt="Vista previa de la terminal" width="720">
+</div>
 
 ## ⚡ Instalación rápida (un solo curl)
 
@@ -31,25 +24,35 @@ Configuración de terminal moderna y ligera, sin frameworks pesados.
 curl -fsSL https://raw.githubusercontent.com/prgr1no/terminal-dotfiles/main/bootstrap.sh | bash
 ```
 
-Instala las herramientas (kitty, zsh, Starship, yazi, fzf, fd, ripgrep, bat, eza, zoxide + Hack Nerd Font) en **Ubuntu/Debian (apt)** o **Fedora (dnf)**, y copia las configuraciones. Es idempotente: puedes volver a lanzarlo sin miedo. Pedirá `sudo` para los paquetes del sistema.
+Instala las herramientas (kitty, zsh, Starship, yazi, fzf, fd, ripgrep, bat, eza, zoxide + Hack Nerd Font) en **Ubuntu/Debian (apt)** o **Fedora (dnf)** y copia las configuraciones. Es idempotente: puedes relanzarlo sin miedo. Pedirá `sudo` para los paquetes del sistema.
 
-> ¿Prefieres revisar antes lo que hace? Es lo razonable con cualquier `curl | bash`:
+> Sano ser precavido con cualquier `curl | bash` — mira antes qué hace:
 > ```bash
 > curl -fsSLO https://raw.githubusercontent.com/prgr1no/terminal-dotfiles/main/bootstrap.sh
 > less bootstrap.sh && bash bootstrap.sh
 > ```
 
+## ✨ Qué hay dentro
+
+- **kitty** — emulador GPU con transparencia (+ blur en KDE/Wayland), tema Dracula, Nerd Font y ~47 atajos.
+- **zsh** — sin Oh My Zsh: autosugerencias, resaltado de sintaxis, historial compartido.
+- **Starship** — prompt Dracula con usuario, host, ruta, rama Git y código de error.
+- **yazi** — explorador de archivos con **vista previa de imágenes** en la propia terminal.
+- **bat · eza · fzf · fd · ripgrep · zoxide · duf · ncdu** — las utilidades modernas de siempre.
+- **Paleta Dracula compartida** para bat, fzf, ripgrep, eza/ls, less, Starship y btop.
+
 ## 📄 Atajos
 
-Chuleta completa de kitty, zsh y yazi en **[docs/cheatsheet.md](docs/cheatsheet.md)**.
+Me hice una chuleta para no acordarme de memoria: **[docs/cheatsheet.md](docs/cheatsheet.md)** (kitty, zsh y yazi).
 
 ## 📁 Estructura
 
 ```text
 dotfiles/          bashrc · zshrc
 config/            kitty · yazi · starship · terminal-kit · ripgrep · btop
-docs/              terminal-kit.md · cheatsheet.md
+docs/              terminal-kit.md · cheatsheet.md · banner.svg · preview.svg
 bin/               install.sh
+bootstrap.sh       instalador de un curl
 ```
 
 ## 🚀 Instalación manual
@@ -62,18 +65,18 @@ cd ~/terminal-dotfiles
 bash bin/install.sh      # hace backup de lo existente antes de reemplazar
 ```
 
-Abre una terminal nueva (o kitty) para aplicar los cambios.
+Abre una terminal nueva (o kitty) y listo.
 
 ## 🔧 Requisitos
-
-Las configs esperan estas herramientas (en el sistema o en `~/.local/bin`):
 
 | Herramienta | Para qué | Fuente |
 |---|---|---|
 | **kitty** | emulador de terminal | `dnf/apt install kitty` o el [instalador oficial](https://sw.kovidgoyal.net/kitty/binary/) |
 | **zsh · starship · fzf · fd · ripgrep · bat · eza · zoxide** | shell y utilidades | gestor de paquetes o binarios de usuario |
 | **yazi** | explorador con vista de imágenes | [sxyazi/yazi](https://github.com/sxyazi/yazi) |
-| **Una Nerd Font** | iconos de eza/starship | [Nerd Fonts](https://www.nerdfonts.com/) (p. ej. Hack) |
+| **Una Nerd Font** | iconos de eza/starship | [Nerd Fonts](https://www.nerdfonts.com/) (yo uso Hack) |
+
+> El `bootstrap.sh` se encarga de todo esto por ti en apt/dnf.
 
 ## 🎨 Tema
 
@@ -83,10 +86,16 @@ Las configs esperan estas herramientas (en el sistema o en `~/.local/bin`):
 
 ## 🆘 Volver a bash
 
+¿Un día no quieres el salto automático a zsh?
+
 ```bash
 TERMINAL_KIT_DISABLE_ZSH=1 bash
 ```
 
 ## 📜 Licencia
 
-[MIT](LICENSE).
+[MIT](LICENSE) — cógelo, tócalo, hazlo tuyo.
+
+<div align="center">
+<sub>Hecho con ☕, Dracula y demasiado rato pixelando el banner.</sub>
+</div>
