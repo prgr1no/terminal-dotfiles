@@ -1,0 +1,45 @@
+# Dracula theme for Yazi
+
+[mgr]
+cwd = { fg = "#8be9fd" }
+
+hovered         = { reversed = true }
+preview_hovered = { underline = true }
+
+find_keyword  = { fg = "#f1fa8c", bold = true, italic = true }
+find_position = { fg = "#ff79c6", bg = "reset", bold = true, italic = true }
+
+marker_copied   = { fg = "#50fa7b", bg = "#50fa7b" }
+marker_cut      = { fg = "#ff5555", bg = "#ff5555" }
+marker_marked   = { fg = "#8be9fd", bg = "#8be9fd" }
+marker_selected = { fg = "#f1fa8c", bg = "#f1fa8c" }
+
+count_copied   = { fg = "#282a36", bg = "#50fa7b" }
+count_cut      = { fg = "#282a36", bg = "#ff5555" }
+count_selected = { fg = "#282a36", bg = "#f1fa8c" }
+
+border_symbol = "│"
+border_style  = { fg = "#6272a4" }
+
+[mode]
+normal_main = { fg = "#282a36", bg = "#bd93f9", bold = true }
+normal_alt  = { fg = "#bd93f9", bg = "#44475a" }
+select_main = { fg = "#282a36", bg = "#50fa7b", bold = true }
+select_alt  = { fg = "#50fa7b", bg = "#44475a" }
+unset_main  = { fg = "#282a36", bg = "#ff79c6", bold = true }
+unset_alt   = { fg = "#ff79c6", bg = "#44475a" }
+
+[status]
+overall   = { bg = "#282a36" }
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+[filetype]
+rules = [
+  { mime = "image/*", fg = "#ffb86c" },
+  { mime = "video/*", fg = "#ff79c6" },
+  { mime = "audio/*", fg = "#ff79c6" },
+  { url = "*/", fg = "#8be9fd", bold = true },
+  { url = "*", fg = "#f8f8f2" },
+]
+

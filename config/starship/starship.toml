@@ -1,0 +1,80 @@
+format = """
+$username$hostname$directory$git_branch$git_status$docker_context$package$nodejs$python$cmd_duration$line_break$character"""
+
+palette = "dracula"
+add_newline = false
+
+[palettes.dracula]
+background = "#282a36"
+current_line = "#44475a"
+foreground = "#f8f8f2"
+comment = "#6272a4"
+cyan = "#8be9fd"
+green = "#50fa7b"
+orange = "#ffb86c"
+pink = "#ff79c6"
+purple = "#bd93f9"
+red = "#ff5555"
+yellow = "#f1fa8c"
+
+[username]
+show_always = true
+style_user = "bold green"
+style_root = "bold red"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+style = "bold green"
+format = "[@$hostname]($style) "
+
+[directory]
+style = "bold cyan"
+truncation_length = 4
+truncate_to_repo = false
+read_only = " ro"
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+style = "bold pink"
+format = "[git:$branch]($style) "
+
+[git_status]
+style = "bold yellow"
+format = "([$all_status$ahead_behind]($style) )"
+conflicted = "!"
+ahead = ">"
+behind = "<"
+diverged = "<>"
+untracked = "?"
+stashed = "$"
+modified = "*"
+staged = "+"
+renamed = "r"
+deleted = "x"
+
+[docker_context]
+style = "cyan"
+format = "[docker:$context]($style) "
+only_with_files = true
+
+[package]
+style = "yellow"
+format = "[pkg:$version]($style) "
+
+[nodejs]
+style = "green"
+format = "[node:$version]($style) "
+
+[python]
+style = "yellow"
+format = "[py:$version]($style) "
+
+[cmd_duration]
+min_time = 1000
+style = "comment"
+format = "[took $duration]($style) "
+
+[character]
+success_symbol = "[>](bold purple)"
+error_symbol = "[x](bold red)"

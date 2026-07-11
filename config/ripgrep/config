@@ -1,0 +1,6 @@
+--colors=path:fg:green
+--colors=line:fg:cyan
+--colors=column:fg:yellow
+--colors=match:fg:magenta
+--colors=match:style:bold
+--colors=context:fg:white
